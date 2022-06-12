@@ -13,6 +13,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { BoldPipe } from './bold.pipe';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SignupComponent,
     BoldPipe,
     ElectronicsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

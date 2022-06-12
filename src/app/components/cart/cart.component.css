@@ -8,7 +8,8 @@
     left: 50%;
     transform: translate(-45%, -45%);
     text-align: center;
-    position: absolute;
+    position: relative;
+    bottom: 179px;
 }
 .center img{
     color: inherit;

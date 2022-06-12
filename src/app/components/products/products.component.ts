@@ -10,6 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductsComponent implements OnInit {
   result: IProduct[] = [];
+  public totalItem: number=0;
   constructor(private api: ApiService, private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -23,9 +24,18 @@ export class ProductsComponent implements OnInit {
         Object.assign(a, { quantity: 1, total: a.Price })
       });
     });
+    this.cartService.getProducts().subscribe(res =>{
+      this.totalItem = res.length;
+    });
   }
+  searchText: string = '';
     addtocart(item: any){
       this.cartService.addtoCart(item);
     }
+
+    onSearchTextEntered(searchValue: string){
+      this.searchText = searchValue;
+      console.log(this.searchText);
+      }
   }
 
